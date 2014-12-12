@@ -1,4 +1,4 @@
-package org.booth.adv.tictactoe14;
+package org.booth.adv.tictactoe;
 
 import java.util.Scanner;
 

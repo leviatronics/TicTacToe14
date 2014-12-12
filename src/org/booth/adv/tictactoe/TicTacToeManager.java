@@ -1,4 +1,4 @@
-package org.booth.adv.tictactoe14;
+package org.booth.adv.tictactoe;
 
 import java.util.Arrays;
 
@@ -17,12 +17,17 @@ public class TicTacToeManager {
         gameOver = false;
     }
     
-    public void play(int x, int y) {
+    // returns true if the play is legal
+    public boolean play(int x, int y) {
+        if(isLegal(x, y)){
+            return false;
+        }
         int pos = x + (y - 1) * 3;
         int xo = xTurn ? -1 : 1;
         board[x-1][y-1] = xo;
         
         xTurn = !xTurn;
+        return true;
     }
     
     public void reset() {
@@ -35,6 +40,10 @@ public class TicTacToeManager {
     
     public boolean isGameOver() {
         return gameOver;
+    }
+    
+    public boolean isLegal(int x, int y){
+        return board[x-1][y-1] != 0;
     }
     
     public String toString(){

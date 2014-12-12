@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package org.booth.adv.tictactoe14;
+package org.booth.adv.tictactoe;
 
 import java.util.Set;
 import java.util.HashSet;
